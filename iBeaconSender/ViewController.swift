@@ -24,7 +24,7 @@ class ViewController: NSViewController, CBPeripheralManagerDelegate {
     }
 
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
-        if peripheral.state == CBPeripheralManagerState.poweredOn {
+        if peripheral.state == CBManagerState.poweredOn {
             // 使用可能なのでボタンを有効にする
             startButton.isEnabled = true
             stopButton.isEnabled = true
